@@ -1,50 +1,137 @@
-index.html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>GeoVigil | AI Land Monitoring</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GeoVigil | Smart Land Governance</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-body {font-family: Arial; margin:0; background:#f4f6f9;}
-header {background:#0b3d91; color:white; padding:60px 20px; text-align:center;}
-section {padding:40px 20px; max-width:900px; margin:auto;}
-.card {background:white; padding:20px; margin:15px 0;
-border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.1);}
-button {padding:12px 25px; background:#0b3d91; color:white;
-border:none; border-radius:5px; cursor:pointer;}
-footer {background:#222; color:white; text-align:center; padding:20px;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{background:#0f172a;color:white;}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:rgba(0,0,0,0.3);
+position:fixed;
+width:100%;
+}
+
+nav h2{color:#00f5ff;}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(135deg,#0f172a,#1e293b);
+padding:20px;
+}
+
+.hero h1{
+font-size:3rem;
+margin-bottom:20px;
+color:#00f5ff;
+}
+
+.hero p{
+max-width:700px;
+margin-bottom:30px;
+opacity:0.8;
+}
+
+.btn{
+padding:12px 30px;
+background:#00f5ff;
+color:black;
+border:none;
+border-radius:30px;
+cursor:pointer;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+section{
+padding:80px 10%;
+text-align:center;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.card{
+background:#1e293b;
+padding:30px;
+border-radius:15px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+footer{
+background:#0f172a;
+padding:30px;
+text-align:center;
+opacity:0.7;
+}
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>GeoVigil</h1>
-<p>AI-Powered Real-Time Land Monitoring for Government Departments</p>
-<button onclick="alert('Contact: contact@geovigil.in')">Request Demo</button>
-</header>
+<nav>
+<h2>GeoVigil</h2>
+</nav>
+
+<div class="hero">
+<h1>AI-Powered Government Land Monitoring</h1>
+<p>Prevent encroachments, centralize land records, and enable real-time GIS-based monitoring for smarter governance and faster decision-making.</p>
+<button class="btn" onclick="alert('Email us at contact@geovigil.in')">Request Demo</button>
+</div>
 
 <section>
-<h2>The Problem</h2>
+<h2>Why GeoVigil?</h2>
+<div class="cards">
 <div class="card">
-Fragmented land records and lack of monitoring lead to illegal encroachments, revenue loss, and legal disputes.
+<h3>AI Encroachment Detection</h3>
+<p>Automatic alerts for unauthorized land use changes.</p>
+</div>
+<div class="card">
+<h3>GIS Dashboard</h3>
+<p>Visualize government land records in one interactive map.</p>
+</div>
+<div class="card">
+<h3>Department Integration</h3>
+<p>Seamless coordination between revenue & planning teams.</p>
+</div>
 </div>
 </section>
 
 <section>
-<h2>Our Solution</h2>
-<div class="card">AI-based encroachment detection</div>
-<div class="card">Interactive GIS dashboard</div>
-<div class="card">Designed for Indian revenue workflows</div>
-</section>
-
-<section style="text-align:center;">
 <h2>Secure Public Land. Strengthen Governance.</h2>
-<button onclick="alert('Book a demo today!')">Book Pilot</button>
+<br>
+<button class="btn" onclick="alert('Book your pilot discussion today!')">Book Pilot Now</button>
 </section>
 
 <footer>
-© 2026 GeoVigil | Vireon
+© 2026 GeoVigil | Built by Vireon
 </footer>
 
 </body>
