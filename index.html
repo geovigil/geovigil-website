@@ -9,7 +9,7 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:#0f172a;color:white;overflow-x:hidden;}
+body{background:#0b1120;color:white;overflow-x:hidden;}
 
 nav{
 position:fixed;
@@ -18,7 +18,7 @@ padding:20px 10%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(15,23,42,0.9);
+background:rgba(11,17,32,0.85);
 z-index:1000;
 }
 
@@ -33,25 +33,59 @@ align-items:center;
 text-align:center;
 position:relative;
 overflow:hidden;
-background:#0f172a;
+background:#0b1120;
 }
 
-.hero::before{
-content:"";
+.grid{
 position:absolute;
 width:200%;
 height:200%;
 background:
-linear-gradient(rgba(0,245,255,0.15) 1px, transparent 1px),
-linear-gradient(90deg, rgba(0,245,255,0.15) 1px, transparent 1px);
+linear-gradient(rgba(0,245,255,0.1) 1px, transparent 1px),
+linear-gradient(90deg, rgba(0,245,255,0.1) 1px, transparent 1px);
 background-size:60px 60px;
-animation:moveGrid 25s linear infinite;
+animation:moveGrid 20s linear infinite;
 transform:rotate(25deg);
 }
 
 @keyframes moveGrid{
 0%{transform:rotate(25deg) translateY(0);}
-100%{transform:rotate(25deg) translateY(-120px);}
+100%{transform:rotate(25deg) translateY(-150px);}
+}
+
+/* Radar Pulse */
+.radar{
+position:absolute;
+width:300px;
+height:300px;
+border-radius:50%;
+border:2px solid #00f5ff;
+animation:pulse 3s infinite ease-out;
+}
+
+@keyframes pulse{
+0%{transform:scale(0.5);opacity:0.8;}
+100%{transform:scale(2);opacity:0;}
+}
+
+/* Floating Nodes */
+.node{
+position:absolute;
+width:8px;
+height:8px;
+background:#00f5ff;
+border-radius:50%;
+box-shadow:0 0 15px #00f5ff;
+animation:float 6s infinite ease-in-out;
+}
+
+.node:nth-child(1){top:30%;left:40%;}
+.node:nth-child(2){top:50%;left:60%;}
+.node:nth-child(3){top:70%;left:30%;}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-20px);}
 }
 
 .hero h1{
@@ -85,13 +119,13 @@ animation:fadeIn 4s ease;
 
 .btn:hover{
 transform:scale(1.1);
-box-shadow:0 0 20px #00f5ff;
+box-shadow:0 0 25px #00f5ff;
 }
 
 section{
 padding:100px 10%;
 text-align:center;
-background:#1e293b;
+background:#111827;
 }
 
 .cards{
@@ -102,7 +136,7 @@ margin-top:40px;
 }
 
 .card{
-background:#0f172a;
+background:#0b1120;
 padding:30px;
 border-radius:15px;
 transition:0.4s;
@@ -114,7 +148,7 @@ box-shadow:0 0 20px #00f5ff;
 }
 
 footer{
-background:#0f172a;
+background:#0b1120;
 padding:30px;
 text-align:center;
 opacity:0.6;
@@ -134,8 +168,14 @@ to{opacity:1; transform:translateY(0);}
 </nav>
 
 <div class="hero">
+<div class="grid"></div>
+<div class="radar"></div>
+<div class="node"></div>
+<div class="node"></div>
+<div class="node"></div>
+
 <h1>AI-Powered Government Land Monitoring</h1>
-<p>Real-time GIS monitoring and intelligent encroachment detection designed for Indian revenue departments.</p>
+<p>Real-time GIS monitoring with intelligent encroachment detection built for modern Indian governance.</p>
 <button class="btn" onclick="alert('Email: contact@geovigil.in')">Request Demo</button>
 </div>
 
