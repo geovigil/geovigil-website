@@ -1,0 +1,51 @@
+index.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>GeoVigil | AI Land Monitoring</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial; margin:0; background:#f4f6f9;}
+header {background:#0b3d91; color:white; padding:60px 20px; text-align:center;}
+section {padding:40px 20px; max-width:900px; margin:auto;}
+.card {background:white; padding:20px; margin:15px 0;
+border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.1);}
+button {padding:12px 25px; background:#0b3d91; color:white;
+border:none; border-radius:5px; cursor:pointer;}
+footer {background:#222; color:white; text-align:center; padding:20px;}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>GeoVigil</h1>
+<p>AI-Powered Real-Time Land Monitoring for Government Departments</p>
+<button onclick="alert('Contact: contact@geovigil.in')">Request Demo</button>
+</header>
+
+<section>
+<h2>The Problem</h2>
+<div class="card">
+Fragmented land records and lack of monitoring lead to illegal encroachments, revenue loss, and legal disputes.
+</div>
+</section>
+
+<section>
+<h2>Our Solution</h2>
+<div class="card">AI-based encroachment detection</div>
+<div class="card">Interactive GIS dashboard</div>
+<div class="card">Designed for Indian revenue workflows</div>
+</section>
+
+<section style="text-align:center;">
+<h2>Secure Public Land. Strengthen Governance.</h2>
+<button onclick="alert('Book a demo today!')">Book Pilot</button>
+</section>
+
+<footer>
+© 2026 GeoVigil | Vireon
+</footer>
+
+</body>
+</html>
