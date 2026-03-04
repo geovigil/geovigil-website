@@ -43,15 +43,13 @@ font-weight:bold;
 color:#38bdf8;
 }
 
-/* HERO SECTION */
-
 .hero{
 padding:120px 20px;
 position:relative;
 overflow:hidden;
 }
 
-/* AI GRID BACKGROUND */
+/* AI GRID */
 
 .hero::before{
 content:"";
@@ -71,6 +69,36 @@ transform:rotate(25deg);
 @keyframes gridMove{
 0%{transform:rotate(25deg) translateY(0);}
 100%{transform:rotate(25deg) translateY(-120px);}
+}
+
+/* SATELLITE DOTS */
+
+.dot{
+position:absolute;
+width:8px;
+height:8px;
+background:#38bdf8;
+border-radius:50%;
+box-shadow:0 0 10px #38bdf8;
+animation:moveDot 10s linear infinite;
+}
+
+.dot2{
+top:30%;
+left:10%;
+animation-delay:2s;
+}
+
+.dot3{
+top:60%;
+left:80%;
+animation-delay:4s;
+}
+
+@keyframes moveDot{
+0%{transform:translate(0,0);}
+50%{transform:translate(200px,-150px);}
+100%{transform:translate(0,0);}
 }
 
 button{
@@ -154,6 +182,10 @@ border-radius:10px;
 </nav>
 
 <div class="hero" id="home">
+
+<div class="dot"></div>
+<div class="dot dot2"></div>
+<div class="dot dot3"></div>
 
 <h2>AI Powered Land Monitoring</h2>
 
