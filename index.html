@@ -73,6 +73,18 @@ padding:10px;
 margin:10px;
 border:none;
 border-radius:5px;
+width:250px;
+}
+
+/* Demo form box */
+
+.form-box{
+display:none;
+background:#020617;
+padding:30px;
+width:300px;
+margin:40px auto;
+border-radius:10px;
 }
 
 </style>
@@ -107,7 +119,7 @@ GeoVigil helps governments monitor public land and detect encroachments using AI
 
 </div>
 
-<div id="form" style="display:none;" id="contact">
+<div class="form-box" id="contact">
 
 <h3>Request Demo</h3>
 
@@ -158,7 +170,7 @@ Illegal encroachments on government land lead to revenue loss, legal disputes an
 <script>
 
 function showForm(){
-document.getElementById("form").style.display="block";
+document.getElementById("contact").style.display="block";
 }
 
 </script>
