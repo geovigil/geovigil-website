@@ -131,7 +131,7 @@ opacity:0.7;
 
 <div class="hero">
 
-<h1>Protect Government Land with AI</h1>
+<h1 id="typing"></h1>
 
 <p>
 GeoVigil helps government departments detect land encroachments
@@ -209,6 +209,19 @@ Manual monitoring is slow and inefficient.
 <p>© 2026 GeoVigil | Built by Team Vireon</p>
 
 </footer>
+<script>
+const text = "Protect Government Land with AI";
+let i = 0;
 
+function typeEffect() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeEffect, 70);
+  }
+}
+
+typeEffect();
+</script>
 </body>
 </html>
