@@ -98,10 +98,26 @@ transform:translateY(-10px);
 box-shadow:0 0 20px #38bdf8;
 }
 
-/* FEATURE ICON */
+/* ICON */
 
-.feature-icon{
+.icon{
 font-size:40px;
+margin-bottom:10px;
+}
+
+/* HOW IT WORKS */
+
+.step{
+background:#0f172a;
+padding:30px;
+border-radius:12px;
+width:250px;
+border:1px solid #1e293b;
+}
+
+.step-number{
+font-size:28px;
+color:#38bdf8;
 margin-bottom:10px;
 }
 
@@ -193,7 +209,7 @@ width:100%;
 
 .hero h2{font-size:32px;}
 
-.card,.pricing-card{width:90%;}
+.card,.pricing-card,.step{width:90%;}
 
 }
 
@@ -212,7 +228,7 @@ width:100%;
 <div class="menu" id="menu">
 <a href="#home">Home</a>
 <a href="#features">Features</a>
-<a href="#solution">Solution</a>
+<a href="#workflow">How It Works</a>
 <a href="#dashboard">Dashboard</a>
 <a href="#pricing">Pricing</a>
 <a href="#impact">Impact</a>
@@ -254,32 +270,32 @@ Monitor government land and detect encroachments using AI and satellite technolo
 <div class="grid">
 
 <div class="card">
-<div class="feature-icon">🛰️</div>
+<div class="icon">🛰️</div>
 AI Encroachment Detection
 </div>
 
 <div class="card">
-<div class="feature-icon">🌍</div>
+<div class="icon">🌍</div>
 Satellite Monitoring
 </div>
 
 <div class="card">
-<div class="feature-icon">🗺️</div>
+<div class="icon">🗺️</div>
 GIS Dashboard
 </div>
 
 <div class="card">
-<div class="feature-icon">⚡</div>
+<div class="icon">⚡</div>
 Real-Time Alerts
 </div>
 
 <div class="card">
-<div class="feature-icon">📊</div>
+<div class="icon">📊</div>
 Data Analytics
 </div>
 
 <div class="card">
-<div class="feature-icon">🏛️</div>
+<div class="icon">🏛️</div>
 Government Integration
 </div>
 
@@ -287,14 +303,27 @@ Government Integration
 
 </section>
 
-<section id="solution">
+<section id="workflow">
 
-<h2>Our Solution</h2>
+<h2>How It Works</h2>
 
 <div class="grid">
-<div class="card">AI Detection</div>
-<div class="card">GIS Dashboard</div>
-<div class="card">Real-Time Alerts</div>
+
+<div class="step">
+<div class="step-number">1</div>
+Satellite images and land data are collected continuously.
+</div>
+
+<div class="step">
+<div class="step-number">2</div>
+AI analyzes changes and detects possible encroachments.
+</div>
+
+<div class="step">
+<div class="step-number">3</div>
+Authorities receive alerts and take action quickly.
+</div>
+
 </div>
 
 </section>
@@ -321,21 +350,18 @@ AI Satellite Monitoring Map
 <h3>Basic</h3>
 <div class="price">Free</div>
 <p>Basic monitoring</p>
-<p>Email alerts</p>
 </div>
 
 <div class="pricing-card">
 <h3>Government</h3>
 <div class="price">Custom</div>
 <p>District monitoring</p>
-<p>Real-time alerts</p>
 </div>
 
 <div class="pricing-card">
 <h3>Enterprise</h3>
 <div class="price">Custom</div>
 <p>State monitoring</p>
-<p>AI analytics</p>
 </div>
 
 </div>
