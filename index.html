@@ -5,6 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+  .menu a{
+margin-left:20px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+.menu a:hover{
+color:#38bdf8;
+}
 
 body{
 font-family:Arial;
@@ -96,13 +106,21 @@ opacity:0.7;
 </head>
 
 <body>
-
 <nav>
+
 <h2>GeoVigil</h2>
-<p>AI Land Monitoring</p>
+
+<div class="menu">
+<a href="#home">Home</a>
+<a href="#problem">Problem</a>
+<a href="#solution">Solution</a>
+<a href="#contact">Contact</a>
+</div>
+
 </nav>
 
-<div class="hero">
+
+<div class="hero" id="home">
 
 <h1>Protect Government Land with AI</h1>
 
@@ -126,7 +144,7 @@ GeoVigil helps government departments detect land encroachments using AI and GIS
 
 </div>
 
-<section>
+<section id="problem">
 
 <h2>The Problem</h2>
 
@@ -134,9 +152,9 @@ GeoVigil helps government departments detect land encroachments using AI and GIS
 Illegal encroachments on government land cause revenue loss, legal disputes and infrastructure delays.
 </p>
 
-</section>
+<section id="problem">
 
-<section>
+<section id="solution">
 
 <h2>Our Solution</h2>
 
@@ -159,7 +177,8 @@ Illegal encroachments on government land cause revenue loss, legal disputes and 
 
 </div>
 
-</section>
+<section id="solution">
+
 
 <footer>
 
