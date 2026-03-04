@@ -5,49 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
- .satellite{
-position:absolute;
-width:8px;
-height:8px;
-background:#38bdf8;
-border-radius:50%;
-box-shadow:0 0 10px #38bdf8;
-animation:moveSat 10s linear infinite;
-}
-
-.s1{
-top:20%;
-left:10%;
-animation-delay:0s;
-}
-
-.s2{
-top:60%;
-left:30%;
-animation-delay:2s;
-}
-
-.s3{
-top:40%;
-left:70%;
-animation-delay:4s;
-}
-
-@keyframes moveSat{
-0%{transform:translate(0,0);}
-50%{transform:translate(200px,-150px);}
-100%{transform:translate(0,0);}
-} 
 
 body{
 font-family:Arial;
 margin:0;
 background:#0f172a;
 color:white;
-overflow-x:hidden;
 }
-
-/* NAVBAR */
 
 nav{
 display:flex;
@@ -60,41 +24,14 @@ nav h2{
 color:#38bdf8;
 }
 
-/* HERO */
-
 .hero{
-position:relative;
 text-align:center;
 padding:120px 20px;
-overflow:hidden;
-}
-
-/* AI MAP GRID */
-
-.hero::before{
-content:"";
-position:absolute;
-top:-50%;
-left:-50%;
-width:200%;
-height:200%;
-background-image:
-linear-gradient(rgba(56,189,248,0.15) 1px, transparent 1px),
-linear-gradient(90deg, rgba(56,189,248,0.15) 1px, transparent 1px);
-background-size:60px 60px;
-animation:gridMove 15s linear infinite;
-transform:rotate(20deg);
-}
-
-@keyframes gridMove{
-0%{transform:rotate(20deg) translateY(0);}
-100%{transform:rotate(20deg) translateY(-80px);}
 }
 
 .hero h1{
-font-size:45px;
+font-size:40px;
 color:#38bdf8;
-position:relative;
 }
 
 .hero p{
@@ -102,7 +39,6 @@ max-width:600px;
 margin:auto;
 margin-top:20px;
 opacity:0.8;
-position:relative;
 }
 
 .btn{
@@ -114,10 +50,22 @@ border:none;
 border-radius:25px;
 font-weight:bold;
 cursor:pointer;
-position:relative;
 }
 
-/* SECTIONS */
+.form-box{
+display:none;
+text-align:center;
+padding:40px;
+background:#020617;
+}
+
+input{
+padding:10px;
+margin:10px;
+width:250px;
+border:none;
+border-radius:5px;
+}
 
 section{
 padding:80px 10%;
@@ -135,15 +83,7 @@ margin-top:40px;
 background:#1e293b;
 padding:25px;
 border-radius:10px;
-transition:0.3s;
 }
-
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 0 20px rgba(56,189,248,0.5);
-}
-
-/* FOOTER */
 
 footer{
 text-align:center;
@@ -153,7 +93,6 @@ opacity:0.7;
 }
 
 </style>
- 
 </head>
 
 <body>
@@ -164,18 +103,26 @@ opacity:0.7;
 </nav>
 
 <div class="hero">
-<div class="satellite s1"></div>
-<div class="satellite s2"></div>
-<div class="satellite s3"></div>  
 
-<h1 id="typing"></h1>
+<h1>Protect Government Land with AI</h1>
 
 <p>
-GeoVigil helps government departments detect land encroachments
-using AI and GIS monitoring systems.
+GeoVigil helps government departments detect land encroachments using AI and GIS monitoring systems.
 </p>
 
-<button class="btn">Request Demo</button>
+<button class="btn" onclick="openForm()">Request Demo</button>
+
+</div>
+
+<div class="form-box" id="demoForm">
+
+<h2>Request a Demo</h2>
+
+<input type="text" placeholder="Your Name"><br>
+<input type="email" placeholder="Your Email"><br>
+<input type="text" placeholder="Organization"><br>
+
+<button class="btn">Submit</button>
 
 </div>
 
@@ -184,9 +131,7 @@ using AI and GIS monitoring systems.
 <h2>The Problem</h2>
 
 <p>
-Illegal encroachments on government land lead to revenue loss,
-legal disputes, and infrastructure delays.
-Manual monitoring is slow and inefficient.
+Illegal encroachments on government land cause revenue loss, legal disputes and infrastructure delays.
 </p>
 
 </section>
@@ -199,42 +144,17 @@ Manual monitoring is slow and inefficient.
 
 <div class="card">
 <h3>AI Detection</h3>
-<p>Automatically detect land encroachments using AI models.</p>
+<p>Automatically detect land encroachments.</p>
 </div>
 
 <div class="card">
 <h3>GIS Dashboard</h3>
-<p>Interactive map showing government land records.</p>
+<p>Interactive land monitoring system.</p>
 </div>
 
 <div class="card">
 <h3>Real-Time Alerts</h3>
-<p>Officials receive alerts when suspicious activity occurs.</p>
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>Impact</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>95%</h3>
-<p>Faster encroachment detection</p>
-</div>
-
-<div class="card">
-<h3>10,000+</h3>
-<p>Acres monitored</p>
-</div>
-
-<div class="card">
-<h3>20+</h3>
-<p>Districts targeted</p>
+<p>Officials receive alerts instantly.</p>
 </div>
 
 </div>
@@ -246,19 +166,14 @@ Manual monitoring is slow and inefficient.
 <p>© 2026 GeoVigil | Built by Team Vireon</p>
 
 </footer>
-<script>
-const text = "Protect Government Land with AI";
-let i = 0;
 
-function typeEffect() {
-  if (i < text.length) {
-    document.getElementById("typing").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typeEffect, 70);
-  }
+<script>
+
+function openForm(){
+document.getElementById("demoForm").style.display="block";
 }
 
-typeEffect();
 </script>
+
 </body>
 </html>
