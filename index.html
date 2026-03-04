@@ -3,6 +3,7 @@
 
 <head>
 <title>GeoVigil</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 
@@ -17,11 +18,25 @@ text-align:center;
 nav{
 background:#020617;
 padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 nav h1{
 color:#38bdf8;
 margin:0;
+}
+
+.menu a{
+margin-left:20px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+.menu a:hover{
+color:#38bdf8;
 }
 
 .hero{
@@ -53,6 +68,13 @@ background:#020617;
 padding:20px;
 }
 
+input{
+padding:10px;
+margin:10px;
+border:none;
+border-radius:5px;
+}
+
 </style>
 
 </head>
@@ -60,10 +82,20 @@ padding:20px;
 <body>
 
 <nav>
+
 <h1>GeoVigil</h1>
+
+<div class="menu">
+<a href="#home">Home</a>
+<a href="#problem">Problem</a>
+<a href="#solution">Solution</a>
+<a href="#team">Team</a>
+<a href="#contact">Contact</a>
+</div>
+
 </nav>
 
-<div class="hero">
+<div class="hero" id="home">
 
 <h2>AI Powered Land Monitoring</h2>
 
@@ -75,19 +107,19 @@ GeoVigil helps governments detect land encroachments using AI and satellite moni
 
 </div>
 
-<div id="form" style="display:none;">
+<div id="form" style="display:none;" id="contact">
 
 <h3>Request Demo</h3>
 
-<input placeholder="Your Name"><br><br>
-<input placeholder="Email"><br><br>
-<input placeholder="Organization"><br><br>
+<input placeholder="Your Name"><br>
+<input placeholder="Email"><br>
+<input placeholder="Organization"><br>
 
 <button>Submit</button>
 
 </div>
 
-<section>
+<section id="problem">
 
 <h2>The Problem</h2>
 
@@ -97,7 +129,7 @@ Illegal encroachments cause revenue loss and infrastructure delays.
 
 </section>
 
-<section>
+<section id="solution">
 
 <h2>Our Solution</h2>
 
@@ -107,9 +139,19 @@ Illegal encroachments cause revenue loss and infrastructure delays.
 
 </section>
 
+<section id="team">
+
+<h2>Team Vireon</h2>
+
+<div class="card">Founder – Akshay</div>
+<div class="card">Technical Development</div>
+<div class="card">Research & Analysis</div>
+
+</section>
+
 <footer>
 
-<p>© 2026 GeoVigil</p>
+<p>© 2026 GeoVigil | Built by Team Vireon</p>
 
 </footer>
 
