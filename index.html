@@ -14,7 +14,7 @@ scroll-behavior:smooth;
 body{
 font-family:Arial;
 margin:0;
-background:#0f172a;
+background:#020617;
 color:white;
 text-align:center;
 }
@@ -28,11 +28,15 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 flex-wrap:wrap;
+border-bottom:1px solid #1e293b;
 }
 
 nav h1{
-color:#38bdf8;
+background:linear-gradient(90deg,#38bdf8,#22c55e);
+-webkit-background-clip:text;
+color:transparent;
 margin:0;
+font-size:26px;
 }
 
 .menu a{
@@ -52,6 +56,19 @@ color:#38bdf8;
 padding:120px 20px;
 position:relative;
 overflow:hidden;
+}
+
+.hero h2{
+font-size:48px;
+background:linear-gradient(90deg,#38bdf8,#22c55e);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.hero p{
+max-width:600px;
+margin:auto;
+opacity:0.8;
 }
 
 /* GRID BACKGROUND */
@@ -95,7 +112,7 @@ animation:pulse 3s infinite;
 100%{transform:translate(-50%,-50%) scale(1.5);opacity:0;}
 }
 
-/* SATELLITE DOTS */
+/* DOTS */
 
 .dot{
 position:absolute;
@@ -128,18 +145,24 @@ animation-delay:4s;
 /* BUTTON */
 
 button{
-padding:12px 30px;
-background:#38bdf8;
+padding:14px 35px;
+background:linear-gradient(90deg,#38bdf8,#22c55e);
 border:none;
-border-radius:20px;
+border-radius:30px;
 font-weight:bold;
 cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+box-shadow:0 0 15px #38bdf8;
 }
 
 /* SECTIONS */
 
 section{
-padding:60px 20px;
+padding:70px 20px;
 }
 
 .grid{
@@ -150,16 +173,17 @@ gap:20px;
 }
 
 .card{
-background:#1e293b;
-padding:20px;
-border-radius:10px;
+background:#0f172a;
+padding:25px;
+border-radius:12px;
 width:250px;
 transition:0.3s;
+border:1px solid #1e293b;
 }
 
 .card:hover{
-transform:translateY(-8px);
-box-shadow:0 0 15px #38bdf8;
+transform:translateY(-10px);
+box-shadow:0 0 20px #38bdf8;
 }
 
 /* COUNTER */
@@ -173,7 +197,8 @@ color:#38bdf8;
 
 footer{
 background:#020617;
-padding:20px;
+padding:25px;
+border-top:1px solid #1e293b;
 }
 
 /* FORM */
@@ -193,9 +218,10 @@ padding:30px;
 width:300px;
 margin:40px auto;
 border-radius:10px;
+border:1px solid #1e293b;
 }
 
-/* MOBILE RESPONSIVE */
+/* MOBILE */
 
 @media(max-width:768px){
 
@@ -209,8 +235,8 @@ display:block;
 margin:10px 0;
 }
 
-.hero{
-padding:80px 20px;
+.hero h2{
+font-size:32px;
 }
 
 .card{
@@ -250,7 +276,6 @@ width:90%;
 <div class="hero" id="home">
 
 <div class="radar"></div>
-
 <div class="dot"></div>
 <div class="dot dot2"></div>
 <div class="dot dot3"></div>
@@ -258,8 +283,10 @@ width:90%;
 <h2>AI Powered Land Monitoring</h2>
 
 <p>
-GeoVigil helps governments monitor public land and detect encroachments using AI and satellite technology.
+Monitor government land and detect encroachments using AI, satellite data, and real-time alerts.
 </p>
+
+<br>
 
 <button onclick="showForm()">Request Demo</button>
 
@@ -284,7 +311,7 @@ GeoVigil helps governments monitor public land and detect encroachments using AI
 <div class="grid">
 
 <div class="card">
-Illegal encroachments on government land lead to revenue loss and infrastructure delays.
+Illegal encroachments on public land cause revenue loss, legal disputes and infrastructure delays.
 </div>
 
 </div>
@@ -299,7 +326,7 @@ Illegal encroachments on government land lead to revenue loss and infrastructure
 
 <div class="card">AI-Based Encroachment Detection</div>
 <div class="card">GIS Monitoring Dashboard</div>
-<div class="card">Real-Time Alerts for Authorities</div>
+<div class="card">Real-Time Alerts</div>
 
 </div>
 
@@ -348,6 +375,7 @@ counters.forEach(counter=>{
 const updateCount=()=>{
 const target=+counter.getAttribute('data-target');
 const count=+counter.innerText;
+
 const speed=50;
 const increment=target/speed;
 
