@@ -14,60 +14,114 @@ color:white;
 text-align:center;
 }
 
+/* NAVBAR */
+
 nav{
 display:flex;
 justify-content:space-between;
+align-items:center;
 padding:20px;
 background:#020617;
 border-bottom:1px solid #1e293b;
 }
 
 nav h1{
-color:#38bdf8;
+background:linear-gradient(90deg,#38bdf8,#22c55e);
+-webkit-background-clip:text;
+color:transparent;
 }
 
 .menu a{
 margin-left:20px;
 text-decoration:none;
 color:white;
+font-weight:bold;
 }
+
+.menu a:hover{
+color:#38bdf8;
+}
+
+/* HERO */
 
 .hero{
-padding:100px 20px;
+padding:120px 20px;
 }
+
+.hero h2{
+font-size:40px;
+background:linear-gradient(90deg,#38bdf8,#22c55e);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.hero p{
+opacity:0.8;
+}
+
+/* BUTTON */
 
 button{
-padding:12px 30px;
-background:#38bdf8;
+padding:14px 35px;
+background:linear-gradient(90deg,#38bdf8,#22c55e);
 border:none;
-border-radius:25px;
+border-radius:30px;
 font-weight:bold;
 cursor:pointer;
+margin-top:20px;
 }
 
+/* SECTIONS */
+
 section{
-padding:60px 20px;
+padding:70px 20px;
 }
 
 .grid{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-gap:20px;
+gap:25px;
 }
+
+/* CARDS */
 
 .card{
 background:#0f172a;
-padding:20px;
-width:220px;
-border-radius:10px;
+padding:25px;
+width:240px;
+border-radius:12px;
 border:1px solid #1e293b;
+transition:0.3s;
 }
 
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 15px #38bdf8;
+}
+
+/* FORM */
+
+input{
+padding:10px;
+margin:10px;
+border:none;
+border-radius:5px;
+width:220px;
+}
+
+.form-box{
+display:none;
+padding:30px;
+}
+
+/* FOOTER */
+
 footer{
-padding:20px;
+padding:25px;
 background:#020617;
 border-top:1px solid #1e293b;
+margin-top:40px;
 }
 
 </style>
@@ -76,6 +130,7 @@ border-top:1px solid #1e293b;
 <body>
 
 <nav>
+
 <h1>GeoVigil</h1>
 
 <div class="menu">
@@ -84,6 +139,7 @@ border-top:1px solid #1e293b;
 <a href="#pricing">Pricing</a>
 <a href="#contact">Contact</a>
 </div>
+
 </nav>
 
 <div class="hero">
@@ -98,13 +154,13 @@ Detect land encroachments using AI and satellite monitoring.
 
 </div>
 
-<div id="contact" style="display:none">
+<div id="contact" class="form-box">
 
 <h3>Request Demo</h3>
 
-<input placeholder="Name"><br><br>
-<input placeholder="Email"><br><br>
-<input placeholder="Organization"><br><br>
+<input placeholder="Name"><br>
+<input placeholder="Email"><br>
+<input placeholder="Organization"><br>
 
 <button>Submit</button>
 
