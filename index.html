@@ -120,6 +120,39 @@ opacity:0.7;
 }
 
 </style>
+  .satellite{
+position:absolute;
+width:8px;
+height:8px;
+background:#38bdf8;
+border-radius:50%;
+box-shadow:0 0 10px #38bdf8;
+animation:moveSat 10s linear infinite;
+}
+
+.s1{
+top:20%;
+left:10%;
+animation-delay:0s;
+}
+
+.s2{
+top:60%;
+left:30%;
+animation-delay:2s;
+}
+
+.s3{
+top:40%;
+left:70%;
+animation-delay:4s;
+}
+
+@keyframes moveSat{
+0%{transform:translate(0,0);}
+50%{transform:translate(200px,-150px);}
+100%{transform:translate(0,0);}
+}
 </head>
 
 <body>
@@ -130,6 +163,9 @@ opacity:0.7;
 </nav>
 
 <div class="hero">
+<div class="satellite s1"></div>
+<div class="satellite s2"></div>
+<div class="satellite s3"></div>  
 
 <h1 id="typing"></h1>
 
