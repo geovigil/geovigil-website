@@ -80,6 +80,11 @@ transform:translateY(-8px);
 box-shadow:0 0 15px #38bdf8;
 }
 
+.counter{
+font-size:40px;
+color:#38bdf8;
+}
+
 footer{
 background:#020617;
 padding:20px;
@@ -180,9 +185,20 @@ Illegal encroachments on government land lead to revenue loss and infrastructure
 
 <div class="grid">
 
-<div class="card">Faster Land Monitoring</div>
-<div class="card">Improved Governance Transparency</div>
-<div class="card">Efficient Land Management</div>
+<div class="card">
+<div class="counter" data-target="10000">0</div>
+Acres Monitored
+</div>
+
+<div class="card">
+<div class="counter" data-target="95">0</div>
+Faster Detection %
+</div>
+
+<div class="card">
+<div class="counter" data-target="20">0</div>
+Districts Targeted
+</div>
 
 </div>
 
@@ -199,6 +215,30 @@ Illegal encroachments on government land lead to revenue loss and infrastructure
 function showForm(){
 document.getElementById("contact").style.display="block";
 }
+
+/* Counter animation */
+
+const counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+const updateCount = () => {
+const target = +counter.getAttribute('data-target');
+const count = +counter.innerText;
+
+const speed = 50;
+
+const increment = target / speed;
+
+if(count < target){
+counter.innerText = Math.ceil(count + increment);
+setTimeout(updateCount,40);
+}else{
+counter.innerText = target;
+}
+};
+
+updateCount();
+});
 
 </script>
 
