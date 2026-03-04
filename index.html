@@ -34,9 +34,7 @@ background:linear-gradient(90deg,#38bdf8,#22c55e);
 color:transparent;
 }
 
-.menu{
-display:flex;
-}
+.menu{display:flex;}
 
 .menu a{
 margin-left:20px;
@@ -45,9 +43,7 @@ color:white;
 font-weight:bold;
 }
 
-.menu a:hover{
-color:#38bdf8;
-}
+.menu a:hover{color:#38bdf8;}
 
 .hamburger{
 display:none;
@@ -68,74 +64,6 @@ font-size:48px;
 background:linear-gradient(90deg,#38bdf8,#22c55e);
 -webkit-background-clip:text;
 color:transparent;
-}
-
-.hero p{
-max-width:600px;
-margin:auto;
-opacity:0.8;
-}
-
-/* GRID BACKGROUND */
-
-.hero::before{
-content:"";
-position:absolute;
-top:-50%;
-left:-50%;
-width:200%;
-height:200%;
-background-image:
-linear-gradient(rgba(56,189,248,0.1) 1px, transparent 1px),
-linear-gradient(90deg, rgba(56,189,248,0.1) 1px, transparent 1px);
-background-size:60px 60px;
-animation:gridMove 15s linear infinite;
-transform:rotate(25deg);
-}
-
-@keyframes gridMove{
-0%{transform:rotate(25deg) translateY(0);}
-100%{transform:rotate(25deg) translateY(-120px);}
-}
-
-/* RADAR */
-
-.radar{
-position:absolute;
-width:200px;
-height:200px;
-border:2px solid #38bdf8;
-border-radius:50%;
-top:40%;
-left:50%;
-transform:translate(-50%,-50%);
-animation:pulse 3s infinite;
-}
-
-@keyframes pulse{
-0%{transform:translate(-50%,-50%) scale(0.5);opacity:1;}
-100%{transform:translate(-50%,-50%) scale(1.5);opacity:0;}
-}
-
-/* DOTS */
-
-.dot{
-position:absolute;
-width:8px;
-height:8px;
-background:#38bdf8;
-border-radius:50%;
-box-shadow:0 0 10px #38bdf8;
-animation:moveDot 10s linear infinite;
-}
-
-.dot2{top:30%;left:10%;animation-delay:2s;}
-.dot3{top:60%;left:80%;animation-delay:4s;}
-
-@keyframes moveDot{
-0%{transform:translate(0,0);}
-50%{transform:translate(200px,-150px);}
-100%{transform:translate(0,0);}
 }
 
 /* BUTTON */
@@ -174,7 +102,7 @@ transform:translateY(-10px);
 box-shadow:0 0 20px #38bdf8;
 }
 
-/* DASHBOARD PREVIEW */
+/* DASHBOARD */
 
 .dashboard{
 background:#0f172a;
@@ -187,14 +115,28 @@ margin:auto;
 
 .map-box{
 height:250px;
-background:linear-gradient(45deg,#0f172a,#020617);
 border:1px solid #38bdf8;
 border-radius:10px;
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:20px;
 opacity:0.7;
+}
+
+/* PRICING */
+
+.pricing-card{
+background:#0f172a;
+padding:30px;
+border-radius:12px;
+border:1px solid #1e293b;
+width:250px;
+}
+
+.price{
+font-size:28px;
+color:#38bdf8;
+margin:10px 0;
 }
 
 /* COUNTER */
@@ -240,7 +182,6 @@ border-top:1px solid #1e293b;
 display:none;
 flex-direction:column;
 width:100%;
-background:#020617;
 }
 
 .menu a{
@@ -255,7 +196,7 @@ display:block;
 font-size:32px;
 }
 
-.card{
+.card,.pricing-card{
 width:90%;
 }
 
@@ -278,6 +219,7 @@ width:90%;
 <a href="#problem">Problem</a>
 <a href="#solution">Solution</a>
 <a href="#dashboard">Dashboard</a>
+<a href="#pricing">Pricing</a>
 <a href="#impact">Impact</a>
 <a href="#contact">Contact</a>
 </div>
@@ -285,11 +227,6 @@ width:90%;
 </nav>
 
 <div class="hero" id="home">
-
-<div class="radar"></div>
-<div class="dot"></div>
-<div class="dot dot2"></div>
-<div class="dot dot3"></div>
 
 <h2>AI Powered Land Monitoring</h2>
 
@@ -341,12 +278,44 @@ Illegal encroachments on public land cause revenue loss and infrastructure delay
 
 <section id="dashboard">
 
-<h2>Platform Dashboard Preview</h2>
+<h2>Platform Dashboard</h2>
 
 <div class="dashboard">
-
 <div class="map-box">
 AI Satellite Monitoring Map
+</div>
+</div>
+
+</section>
+
+<section id="pricing">
+
+<h2>Pricing Plans</h2>
+
+<div class="grid">
+
+<div class="pricing-card">
+<h3>Basic</h3>
+<div class="price">Free</div>
+<p>Basic land monitoring</p>
+<p>Email alerts</p>
+<p>Limited reports</p>
+</div>
+
+<div class="pricing-card">
+<h3>Government</h3>
+<div class="price">Custom</div>
+<p>District monitoring</p>
+<p>Real-time alerts</p>
+<p>GIS dashboard</p>
+</div>
+
+<div class="pricing-card">
+<h3>Enterprise</h3>
+<div class="price">Custom</div>
+<p>State-wide monitoring</p>
+<p>AI analytics</p>
+<p>Priority support</p>
 </div>
 
 </div>
