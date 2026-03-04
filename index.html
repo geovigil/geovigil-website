@@ -43,8 +43,34 @@ font-weight:bold;
 color:#38bdf8;
 }
 
+/* HERO SECTION */
+
 .hero{
-padding:100px 20px;
+padding:120px 20px;
+position:relative;
+overflow:hidden;
+}
+
+/* AI GRID BACKGROUND */
+
+.hero::before{
+content:"";
+position:absolute;
+top:-50%;
+left:-50%;
+width:200%;
+height:200%;
+background-image:
+linear-gradient(rgba(56,189,248,0.1) 1px, transparent 1px),
+linear-gradient(90deg, rgba(56,189,248,0.1) 1px, transparent 1px);
+background-size:60px 60px;
+animation:gridMove 15s linear infinite;
+transform:rotate(25deg);
+}
+
+@keyframes gridMove{
+0%{transform:rotate(25deg) translateY(0);}
+100%{transform:rotate(25deg) translateY(-120px);}
 }
 
 button{
@@ -216,8 +242,6 @@ function showForm(){
 document.getElementById("contact").style.display="block";
 }
 
-/* Counter animation */
-
 const counters = document.querySelectorAll('.counter');
 
 counters.forEach(counter => {
@@ -226,7 +250,6 @@ const target = +counter.getAttribute('data-target');
 const count = +counter.innerText;
 
 const speed = 50;
-
 const increment = target / speed;
 
 if(count < target){
