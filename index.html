@@ -32,7 +32,6 @@ nav h1{
 background:linear-gradient(90deg,#38bdf8,#22c55e);
 -webkit-background-clip:text;
 color:transparent;
-margin:0;
 }
 
 .menu{
@@ -49,8 +48,6 @@ font-weight:bold;
 .menu a:hover{
 color:#38bdf8;
 }
-
-/* HAMBURGER */
 
 .hamburger{
 display:none;
@@ -177,6 +174,29 @@ transform:translateY(-10px);
 box-shadow:0 0 20px #38bdf8;
 }
 
+/* DASHBOARD PREVIEW */
+
+.dashboard{
+background:#0f172a;
+border:1px solid #1e293b;
+border-radius:15px;
+padding:40px;
+max-width:900px;
+margin:auto;
+}
+
+.map-box{
+height:250px;
+background:linear-gradient(45deg,#0f172a,#020617);
+border:1px solid #38bdf8;
+border-radius:10px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:20px;
+opacity:0.7;
+}
+
 /* COUNTER */
 
 .counter{
@@ -257,6 +277,7 @@ width:90%;
 <a href="#home">Home</a>
 <a href="#problem">Problem</a>
 <a href="#solution">Solution</a>
+<a href="#dashboard">Dashboard</a>
 <a href="#impact">Impact</a>
 <a href="#contact">Contact</a>
 </div>
@@ -311,10 +332,22 @@ Illegal encroachments on public land cause revenue loss and infrastructure delay
 <h2>Our Solution</h2>
 
 <div class="grid">
-
 <div class="card">AI Detection</div>
 <div class="card">GIS Dashboard</div>
 <div class="card">Real-Time Alerts</div>
+</div>
+
+</section>
+
+<section id="dashboard">
+
+<h2>Platform Dashboard Preview</h2>
+
+<div class="dashboard">
+
+<div class="map-box">
+AI Satellite Monitoring Map
+</div>
 
 </div>
 
@@ -355,11 +388,7 @@ Districts Targeted
 
 function toggleMenu(){
 let menu=document.getElementById("menu");
-if(menu.style.display==="flex"){
-menu.style.display="none";
-}else{
-menu.style.display="flex";
-}
+menu.style.display = menu.style.display==="flex" ? "none":"flex";
 }
 
 function showForm(){
@@ -372,7 +401,6 @@ counters.forEach(counter=>{
 const updateCount=()=>{
 const target=+counter.getAttribute('data-target');
 const count=+counter.innerText;
-
 const increment=target/50;
 
 if(count<target){
